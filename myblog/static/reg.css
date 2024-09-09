@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.loki{
+    height: 100vh;
+}
+
+ .kcee{
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    height: ;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color:orangered;
+    border: 2px double orangered;
+    background-color: aliceblue;
+    box-shadow: 6px 6px 6px orangered;
+    display: inline-block;
+    padding: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.kreb {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.tax {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.jazz{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.jazz:hover {
+    background-color: orangered;
+}
+
+p {
+    margin-top: 20px;
+    color: #333;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+} 
+
+.error{
+    border: dotted red;
+}
+
+.port{
+    color: red;
+   
+    font-size: 13px;
+}
+
+.jk{
+    display: flex;
+    margin-bottom: 10px;
+}
+.lad{
+    margin-left: 5px;
+    font-size: 13px;
+    color: orangered;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.grape{
+    text-align: center;
+    border: 2px double red;
+    display: inline-block;
+    padding: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}

@@ -1,0 +1,9 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    {% for gist in gists %}
+        <h1>{{ gist.title }}</h1>
+        <p>{{ gist.content }}</p>
+        <h5 class="kkk">by {{ gist.Name }} on {{ gist.date }}</h5>
+    {% endfor %}
+    {% endblock content %}

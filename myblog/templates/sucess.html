@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='suc.css') }}">
+{% endblock  %}
+{% block content %}
+<div class="ops">
+<div class="koby">
+    {% with bettys= get_flashed_messages(with_categories=True) %}
+    {% if bettys %}
+    {% for category, message in bettys %}
+  <h1>  {{ message }} </h1>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}   
+
+<p> 
+    you have successfuly register on perception
+</p>
+<h4>
+    click here <a href="{{url_for('log')}}">log in and start bloging </a> 
+</h4>
+
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='diary.css')}}">
+    {% block styles %}{% endblock %}
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title>My diary - about </title>
+    {% endif %}
+</head>
+<body>
+    <header >
+        <h1 class="legon">
+            Perception
+        </h1>
+        <nav class="legga">
+            <ul class="obi">
+                <li>Home</li>
+                <li>About</li>
+                <li>Profile</li>
+                <li>landing</li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock content %} 
+        
+</body>
+</html>

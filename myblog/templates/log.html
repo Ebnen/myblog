@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('static', filename='reg.css')}}">
+{% endblock %}
+
+{% block content %}
+{% with gels= get_flashed_messages(with_categories=True) %}
+    {% if gels %}
+    {% for category, message in gels %}
+  <h1 class="grape">  {{ message }} </h1>
+    {% endfor %}
+    {% endif %}
+    {% endwith %} 
+<div class="loki">
+<div class="kcee">
+<div class="form-container">
+    <h1>Perception</h1>
+    <form action="#" method="POST">
+        {{ sign.hidden_tag() }}
+        {{ sign.username.label(class="kreb") }}
+        {% if sign.username.errors %}
+        {{ sign.username(class="tax error", placeholder="ebenzy") }}
+        <div class="yagt"></div>
+        {% for error in sign.username.errors %}
+        <h1 class="port">{{ error }}</h1>
+        {% endfor %}
+        </div>
+        {% else %}
+        {{ sign.username(class="tax", placeholder="ebenzy") }}
+        {% endif %}
+
+
+        {{ sign.password.label(class="kreb") }}
+        {% if sign.password.errors %}
+        {{ sign.password(class="tax error", placeholder="**************") }}
+        <div class="yagt"></div>
+        {% for error in sign.password.errors %}
+        <h1 class="port">{{ error }}</h1>
+        {% endfor %}
+        </div>
+        {% else %}
+        {{ sign.password(class="tax", placeholder="************") }}
+        {% endif %}
+
+        <div class="jk">
+        {{sign.remember(class="fin")}}
+        {{sign.remember.label(class="lad")}} 
+    </div>
+        
+        {{ sign.submit(class="jazz")}}
+    </form>
+    <p>Do not have an account? <a href="{{url_for('reg')}}">Sign up</a></p>
+</div>
+</div>
+</div>
+
+{% endblock content %}
