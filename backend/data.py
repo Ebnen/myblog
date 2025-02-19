@@ -1,10 +1,7 @@
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from rare import  base
-
-
-
+from sqlalchemy.orm import sessionmaker, session
+from rare import base
 
 
 
@@ -43,12 +40,14 @@ class Database:
         print("Session and engine closed successfully")
   
   
+
         
 db = Database("don","08033191820#Ee","localhost","myblog")
 db.creat()
 session = db.session()
 
 session.close()
+
 
 # ab = db.engine()
 # new_user = Admin(id=1,f_name="Alice", l_name="obi")

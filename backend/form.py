@@ -1,10 +1,11 @@
-from collections.abc import Sequence
-from typing import Any, Mapping
+
 from flask_wtf import FlaskForm
 from wtforms import StringField,PasswordField,SubmitField,BooleanField
 from wtforms.validators import DataRequired,length,Email,EqualTo,ValidationError
-from rare import User
 from data import session
+from  rare import User, Post
+
+
 
 
 class registration(FlaskForm):

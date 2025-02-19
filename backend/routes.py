@@ -1,15 +1,14 @@
-#!/usr/bin/python3
 from flask import Flask, render_template, url_for, flash, redirect
-from form import registration, login
-from rare import User, Post
-from data import session
-from flask_login import LoginManager, UserMixin, logout_user,current_user, login_required,login_user
 from werkzeug.security import check_password_hash
+from data import session
+from  form import registration, login
+from flask_login import login_user
+from flask_login import LoginManager, UserMixin, logout_user,current_user, login_required,login_user
+from rare import User, Post
 
 app = Flask(__name__)
-
-app.config['SECRET_KEY'] = '08033191820eE'
 log_direct = LoginManager(app) 
+app.config['SECRET_KEY'] = '08033191820eE'
 
 gists=[
     {
@@ -35,7 +34,7 @@ def home():
 def about():
     return render_template("about.html", title='About-info')
 
-@app.route('/reg', methods=['GET','POST'])
+@app.route('/templates/reg', methods=['GET','POST'])
 def reg():
     yam = registration()
     if yam.validate_on_submit():
@@ -64,9 +63,6 @@ def log():
 def sucess():
     yam = registration()
     return render_template('sucess.html', title='sucess', yam=yam)
-
-
- 
 
 
 if __name__ == '__main__':

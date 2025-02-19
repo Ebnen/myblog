@@ -1,12 +1,17 @@
-
+from routes import session
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column,Integer,String,ForeignKey,Text,func,DateTime
-from work import log_direct
-from form  import session
-from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
-base=declarative_base()
+from sqlalchemy.ext.declarative import declarative_base
+from data import session
+from routes import log_direct, UserMixin
+
+
+
+
+base = declarative_base()
+
+
 
 @log_direct.user_loader
 def loadUser(Id):
