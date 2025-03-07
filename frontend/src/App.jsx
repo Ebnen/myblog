@@ -1,13 +1,19 @@
 // Code: Main App compone
-import Navbar from "./component/navbar"
-import Body from "./component/body"
+import HomePage from "./page/homePage"
+
 
 function App() {
   return (
     <>
-        <Navbar />
-        <Body/>
+
+    <HomePage/>
         
+      {/* Navbar */}
+
+
+     
+
+  
     </>
   )
 }
